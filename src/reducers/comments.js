@@ -1,6 +1,14 @@
 
 function comments(state = [], action){
-    //console.log(state, action);
+
+    switch (action.type){
+        case 'ADD_COMMENT':
+
+
+        default:
+            return state;
+
+    }
     return state;
 }
 
