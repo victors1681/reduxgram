@@ -56,7 +56,7 @@ class Single extends React.Component{
                         <Photo {...this.props} key={index} i={index} post={post} />
                     </Grid.Column>
                     <Grid.Column width="6">
-                        <Comments {...this.props} postComments = {postComments} />
+                        <Comments {...this.props} postComments = {postComments} postId={postId} />
                         <Divider/>
                         <Form onSubmit={this.onSummit} ref ={(form)=> this.commentForm = form }>
                             <Form.Input  type="text" placeholder="author" name ="author" value = {this.state.author} onChange ={this.handleChange}   />

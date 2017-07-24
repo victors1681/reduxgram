@@ -11,7 +11,15 @@ function postCommets(state=[], action)
             ];
 
         case 'REMOVE_COMMENT':
-            return state;
+            console.log("removin a comment", action.postId, action.i);
+
+            return [
+                //from the start to the one we want to delete
+                ...state.slice(0,action.i),
+                //skip the comment we want to delete and add others
+                ...state.slice(action.i + 1)
+
+            ]
 
         default:
             return state;

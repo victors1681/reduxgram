@@ -1,7 +1,14 @@
 import React  from 'react';
-import { Container, Grid, Card } from 'semantic-ui-react';
+import { Container, Icon } from 'semantic-ui-react';
 
 class PostComments extends React.Component{
+
+    removeComments = ()=>{
+        const postId = this.props.postId;
+        const index = this.props.index;
+
+        this.props.removeComment(postId, index);
+    }
 
     render(){
         const user = this.props.comment.user;
@@ -11,6 +18,7 @@ class PostComments extends React.Component{
             <Container>
                 <strong>{user + ": "}</strong>
                 {text}
+                <Icon name="delete" onClick={this.removeComments} color="red" link/>
             </Container>
         );
     }

@@ -9,7 +9,7 @@ class Comments extends React.Component{
 
         return (
             <Container>
-                {comments.map((comment, i)=> <PostComments key={i} comment={comment} />)}
+                {comments.map((comment, i)=> <PostComments key={i} index={i} comment={comment} {...this.props} />)}
             </Container>
         );
     }
