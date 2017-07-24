@@ -17,7 +17,11 @@ import Raven from 'raven-js';
 import {sentry_url} from './config';
 
 Raven.config(sentry_url).install();
- 
+
+//Allow  to open a dialog modal if something happened
+//Raven.captureMessage('Something bad happened');
+//Raven.showReportDialog();
+
 
 const router = (
     <Provider store={store}>
