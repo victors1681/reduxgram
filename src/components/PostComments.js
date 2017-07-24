@@ -1,5 +1,5 @@
 import React  from 'react';
-import { Container, Icon } from 'semantic-ui-react';
+import { Container, Icon, Divider } from 'semantic-ui-react';
 
 class PostComments extends React.Component{
 
@@ -19,6 +19,7 @@ class PostComments extends React.Component{
                 <strong>{user + ": "}</strong>
                 {text}
                 <Icon name="delete" onClick={this.removeComments} color="red" link/>
+                <Divider fitted hidden />
             </Container>
         );
     }
