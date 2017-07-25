@@ -37,8 +37,10 @@ class Photo extends React.Component {
                             </Card.Description>
                         </Grid.Column>
                         <Grid.Column textAlign='right' >
-                        <Card.Description onClick={this.props.increment.bind(null, i)}>
-                             <Icon  name="heart outline like"/>{' '+likes + ' Likes'}
+                        <Card.Description >
+                            <Link onClick={this.props.increment.bind(null, i)} >
+                             <Icon  name="heart outline like" />{' '+likes + ' Likes'}
+                            </Link>
                              </Card.Description>
                         </Grid.Column>
                         </Grid.Row>

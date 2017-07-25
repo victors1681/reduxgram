@@ -5,7 +5,6 @@ import App from './components/App'
 
 import Single from './components/Single'
 import PhotoGrid from './components/PhotoGrid'
-
 //Routers Dependencies
 import { Router, Route, IndexRoute, browserHistory} from 'react-router'
 import { Provider } from 'react-redux';
@@ -13,6 +12,16 @@ import store, { history} from './store';
 
 import './semantic/dist/semantic.min.css';
 import './App.css'
+
+import Raven from 'raven-js';
+import {sentry_url} from './config';
+
+Raven.config(sentry_url).install();
+
+//Allow  to open a dialog modal if something happened
+//Raven.captureMessage('Something bad happened');
+//Raven.showReportDialog();
+
 
 const router = (
     <Provider store={store}>

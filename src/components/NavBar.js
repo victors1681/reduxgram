@@ -6,7 +6,7 @@ const NavBar =() => (
 <Menu>
    <Menu.Menu>
         <Menu.Item>
-            Testin My Logo 
+             ReduxGram
         </Menu.Item>
     </Menu.Menu>
     <Menu.Menu position='right'>
