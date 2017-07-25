@@ -15,7 +15,9 @@ const defaultState = {
     posts
 };
 
-const store = createStore(rootReducer, defaultState);
+const devTool = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+
+const store = createStore(rootReducer, defaultState, devTool);
 
 
 export const history = syncHistoryWithStore(browserHistory, store);
